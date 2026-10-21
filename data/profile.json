@@ -1,0 +1,140 @@
+{
+  "email": "zengjiachen22@163.com",
+  "github": "https://github.com/Jackreceive",
+  "photo": "",
+  "updated": "2026-10-21",
+  "locales": {
+    "zh": {
+      "name": "曾家琛",
+      "alternateName": "Jiachen Zeng",
+      "role": "电子信息 · 硕士研究生",
+      "affiliation": "西安电子科技大学",
+      "intro": [
+        "你好，我是曾家琛，目前在西安电子科技大学攻读电子信息专业硕士，研究方向是医学影像。本科就读于中国矿业大学（北京）计算机科学与技术专业。",
+        "除研究之外，我也进行 Go 后端开发与 AI 应用实践，做过 AI 学习助手和轻量内容管理平台。这个网站记录我的学习、项目以及生活。"
+      ],
+      "research": "我目前的研究方向是医学影像。",
+      "education": [
+        {
+          "id": "xidian",
+          "period": "2026 — 2029（预计）",
+          "title": "西安电子科技大学",
+          "subtitle": "电子信息，专业型硕士研究生",
+          "description": "研究方向：医学影像。"
+        },
+        {
+          "id": "cumtb",
+          "period": "2022 — 2026",
+          "title": "中国矿业大学（北京）",
+          "subtitle": "计算机科学与技术，本科",
+          "description": "成绩排名：6 / 103。"
+        }
+      ],
+      "projects": [
+        {
+          "id": "ai-learning-agent",
+          "title": "AI 学习助手",
+          "url": "https://github.com/Jackreceive/ai-learning-agent",
+          "technologies": "Go / Eino / ReAct / RAG / Milvus / 火山方舟",
+          "description": "面向学习资料问答与编程辅助的个人项目，集多轮对话、知识库问答和工具调用于一体，通过 Go HTTP 服务提供 9 个 API。",
+          "details": [
+            "基于 Eino 串联中文递归分块、Ark Embedding 与 Milvus 索引检索，结合 Top-K 和余弦相似度阈值构建回答上下文，支持知识录入、持久化、检索及清空。",
+            "启动时探测实际向量维度，校验集合字段与模型标识；使用强一致性读写，支持新增、删除后的即时检索及数量查询。",
+            "使用 Eino ReAct 编排模型决策、工具执行与结果回传，接入计算器、时间等 4 类工具，设置 10 步执行上限。天气及搜索工具使用示例数据。"
+          ]
+        },
+        {
+          "id": "contenthub",
+          "title": "轻量写作与内容管理平台（ContentHub）",
+          "url": "https://github.com/Jackreceive/ContentHub",
+          "technologies": "Go / Gin / GORM / MySQL / Redis / JWT",
+          "description": "面向个人写作与内容管理的个人项目，实现前后端一体化 Web 应用，覆盖用户注册登录和文章发布、浏览、编辑与删除。",
+          "details": [
+            "基于 Gin 构建 9 个 RESTful API，通过认证中间件校验身份，并在文章更新与删除时校验作者归属。",
+            "采用 JWT 双令牌与 Redis 保存会话和 JTI，通过 WATCH 事务原子轮换刷新令牌，退出时撤销会话，实现刷新令牌单次使用；使用 bcrypt 存储密码哈希。",
+            "使用 GORM 建模用户与文章的一对多关系，配合唯一索引、自动迁移及关联查询实现持久化；前端支持令牌自动换发、请求重试、文章管理与搜索。"
+          ]
+        }
+      ],
+      "skills": [
+        { "label": "Go 后端", "description": "Go、Gin、GORM、RESTful API、中间件、Context、参数校验与错误处理。" },
+        { "label": "数据与认证", "description": "MySQL 关系建模与索引、Redis 会话管理、JWT 双令牌与令牌轮换、bcrypt。" },
+        { "label": "AI 应用", "description": "Eino、ReAct 工具调用、RAG 检索增强、Milvus、Embedding。" },
+        { "label": "工程工具", "description": "Git 版本管理、Go 单元测试。" }
+      ],
+      "awards": [
+        { "id": "apollo", "title": "百度 Apollo 自动驾驶仿真赛", "result": "北京市二等奖", "date": "2025 年 7 月" },
+        { "id": "lanqiao", "title": "蓝桥杯 C++ A 组", "result": "北京市三等奖", "date": "2024 年 4 月" },
+        { "id": "neccs", "title": "全国大学生英语竞赛", "result": "三等奖", "date": "" },
+        { "id": "cet6", "title": "大学英语六级（CET-6）", "result": "576 分", "date": "" }
+      ],
+      "lifeEntries": []
+    },
+    "en": {
+      "name": "Jiachen Zeng",
+      "alternateName": "曾家琛",
+      "role": "Master’s student in Electronic Information",
+      "affiliation": "Xidian University",
+      "intro": [
+        "Hello, I’m Jiachen Zeng, a master’s student in Electronic Information at Xidian University. My current research focuses on medical imaging. I previously studied Computer Science and Technology at China University of Mining and Technology-Beijing.",
+        "Alongside my research, I work on Go backend development and AI applications. My personal projects include an AI learning assistant and a lightweight content management platform. This website is a place for my studies, projects, and life beyond work."
+      ],
+      "research": "My current research focuses on medical imaging.",
+      "education": [
+        {
+          "id": "xidian",
+          "period": "2026 — 2029 (expected)",
+          "title": "Xidian University",
+          "subtitle": "Professional master’s program in Electronic Information",
+          "description": "Research focus: medical imaging."
+        },
+        {
+          "id": "cumtb",
+          "period": "2022 — 2026",
+          "title": "China University of Mining and Technology-Beijing",
+          "subtitle": "Bachelor’s degree in Computer Science and Technology",
+          "description": "Academic rank: 6 / 103."
+        }
+      ],
+      "projects": [
+        {
+          "id": "ai-learning-agent",
+          "title": "AI Learning Assistant",
+          "url": "https://github.com/Jackreceive/ai-learning-agent",
+          "technologies": "Go / Eino / ReAct / RAG / Milvus / Volcengine Ark",
+          "description": "A personal web application for questions about learning materials and programming assistance. It combines multi-turn conversations, knowledge-base Q&A, and tool calling, with 9 APIs served over Go HTTP.",
+          "details": [
+            "Built a knowledge-base pipeline with Eino, recursive Chinese text chunking, Ark Embedding, and Milvus. Top-K retrieval and cosine similarity thresholds select answer context, with support for ingestion, persistence, retrieval, and clearing the knowledge base.",
+            "Detects actual embedding dimensions at startup and checks collection fields and model identifiers. Strongly consistent reads and writes support immediate retrieval and count queries after additions or deletions.",
+            "Uses Eino ReAct to coordinate model decisions, tool execution, and result aggregation across four tool types, including calculation and time queries, with a 10-step execution limit. Weather and search tools use sample data."
+          ]
+        },
+        {
+          "id": "contenthub",
+          "title": "ContentHub — Lightweight Writing and Content Management",
+          "url": "https://github.com/Jackreceive/ContentHub",
+          "technologies": "Go / Gin / GORM / MySQL / Redis / JWT",
+          "description": "A personal full-stack web application for writing and content management, covering account registration and sign-in, plus article publishing, browsing, editing, and deletion.",
+          "details": [
+            "Built 9 RESTful APIs with Gin. Authentication middleware checks user identity, while update and delete operations additionally verify article ownership.",
+            "Uses JWT access and refresh tokens, Redis sessions and JTIs, and WATCH transactions for atomic refresh-token rotation. Refresh tokens are single-use, sessions are revoked on sign-out, and passwords are hashed with bcrypt.",
+            "Models the one-to-many relationship between users and articles with GORM, unique indexes, automatic migrations, and association queries. The frontend supports automatic token refresh, request retries, article management, and search."
+          ]
+        }
+      ],
+      "skills": [
+        { "label": "Go backend", "description": "Go, Gin, GORM, RESTful APIs, middleware, Context, input validation, and error handling." },
+        { "label": "Data and authentication", "description": "MySQL relational modeling and indexes, Redis sessions, JWT access and refresh tokens, token rotation, and bcrypt." },
+        { "label": "AI applications", "description": "Eino, ReAct tool calling, retrieval-augmented generation (RAG), Milvus, and embeddings." },
+        { "label": "Engineering tools", "description": "Git version control and Go unit testing." }
+      ],
+      "awards": [
+        { "id": "apollo", "title": "Baidu Apollo Autonomous Driving Simulation Competition", "result": "Second Prize, Beijing", "date": "July 2025" },
+        { "id": "lanqiao", "title": "Lanqiao Cup, C++ Group A", "result": "Third Prize, Beijing", "date": "April 2024" },
+        { "id": "neccs", "title": "National English Competition for College Students", "result": "Third Prize", "date": "" },
+        { "id": "cet6", "title": "College English Test Band 6 (CET-6)", "result": "Score: 576", "date": "" }
+      ],
+      "lifeEntries": []
+    }
+  }
+}
