@@ -1,5 +1,5 @@
 :root {
-  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
   color: #333;
   background: #fff;
   font-synthesis: none;
@@ -29,7 +29,9 @@ p { margin: 14px 0; }
 .profile-portrait img { display: block; width: 100%; height: auto; }
 .photo-placeholder { display: flex; align-items: center; justify-content: center; aspect-ratio: 3 / 4; background: #f5f5f5; color: #777; font-size: 13px; text-align: center; padding: 10px; }
 .profile-information { min-width: 0; }
-.identity { margin: 0; }
+.profile-name { margin: 0 0 14px; font-size: 18px; line-height: 1.5; font-weight: 600; }
+.alternate-name { display: inline-block; font-size: 16px; font-weight: 400; }
+.identity { margin: 0; font-size: 15px; line-height: 1.75; font-weight: 400; }
 ul { margin: 10px 0; padding-left: 24px; }
 li { margin: 9px 0; padding-left: 2px; }
 .period { display: inline-block; }
@@ -60,5 +62,4 @@ footer { margin-top: 38px; font-size: 12px; color: #777; }
 
 @media (max-width: 360px) {
   .profile-overview { grid-template-columns: 85px minmax(0, 1fr); gap: 15px; }
-  .profile-information h1 { font-size: 23px; }
 }

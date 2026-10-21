@@ -30,9 +30,7 @@ const labels = {
 function readRoute() {
   const match = window.location.hash.match(/^#\/(zh|en)\/(home|research|life)$/);
   if (match) return { language: match[1], page: match[2] };
-  let language = 'zh';
-  try { if (localStorage.getItem('homepage-language') === 'en') language = 'en'; } catch { /* Storage is optional. */ }
-  return { language, page: window.location.hash === '#projects' ? 'research' : 'home' };
+  return { language: 'en', page: window.location.hash === '#projects' ? 'research' : 'home' };
 }
 
 function routeTo(language, page) {
@@ -53,9 +51,8 @@ function Home({ profile, shared, text, language }) {
           : <div className="photo-placeholder">{text.photoPlaceholder}</div>}
       </div>
       <div className="profile-information">
-        <h1>{profile.name}</h1>
+        <h1 className="profile-name">{profile.name} <span className="alternate-name" lang={language === 'zh' ? 'en' : 'zh-CN'}>({profile.alternateName})</span></h1>
         <p className="identity">
-          <span lang={language === 'zh' ? 'en' : 'zh-CN'}>{profile.alternateName}</span><br />
           {profile.role}<br />
           {profile.affiliation}<br />
           Email: <a href={`mailto:${shared.email}`}>{shared.email}</a><br />
@@ -158,7 +155,6 @@ function App() {
     document.documentElement.lang = route.language === 'zh' ? 'zh-CN' : 'en';
     document.title = `${profile?.name || (route.language === 'zh' ? '曾家琛' : 'Jiachen Zeng')} | ${text[route.page]}`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', text.description);
-    try { localStorage.setItem('homepage-language', route.language); } catch { /* The URL still preserves the language. */ }
     if (previousPage.current !== route.page) {
       window.scrollTo(0, 0);
       mainRef.current?.focus({ preventScroll: true });
